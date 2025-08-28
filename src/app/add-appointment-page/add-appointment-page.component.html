@@ -1,45 +1,33 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Input phone number</mat-label>
-    <input matInput placeholder="" value="">
+<form (ngSubmit)="addAppointmentOnClick()" #appointmentForm="ngForm">
+  <mat-form-field>
+    <mat-label>Phone Number</mat-label>
+    <input matInput [(ngModel)]="appointment.phoneNumber" name="phoneNumber" required>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Input phone number</mat-label>
-    <input matInput placeholder="" value="">
+  <mat-form-field>
+    <mat-label>Make</mat-label>
+    <input matInput [(ngModel)]="appointment.make" name="make" required>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Input make</mat-label>
-    <input matInput placeholder="" value="">
+  <mat-form-field>
+    <mat-label>Model</mat-label>
+    <input matInput [(ngModel)]="appointment.model" name="model" required>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Input model</mat-label>
-    <input matInput placeholder="" value="">
+  <mat-form-field>
+    <mat-label>Note</mat-label>
+    <input matInput [(ngModel)]="appointment.note" name="note">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Input note</mat-label>
-    <input matInput placeholder="" value="">
+  <mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput [(ngModel)]="appointment.date" name="date" type="datetime-local" required>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Input date</mat-label>
-    <input matInput placeholder="" value="">
+  <mat-form-field>
+    <mat-label>State</mat-label>
+    <input matInput [(ngModel)]="appointment.state" name="state" required>
   </mat-form-field>
 
-   <mat-form-field class="example-full-width">
-    <mat-label>Input state</mat-label>
-    <input matInput placeholder="" value="">
-  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Add Appointment</button>
 </form>
-<section>
-  <div class="example-label">Text</div>
-  <div class="example-button-row">
-    <button matButton>Basic</button>
-    <button matButton disabled>Disabled</button>
-    <a matButton href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-  <button mat-raised-button matButton="elevated">Basic</button>
-</section>

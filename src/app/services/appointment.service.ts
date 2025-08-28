@@ -12,4 +12,9 @@ export class AppointmentService {
   public getAllAppointments(): Observable<AppointmentDto[]> {
     return this.http.get<AppointmentDto[]>(`${this.apiServerUrl}/appointments`);
   }
+
+  public addAppointment(appointment: AppointmentDto): Observable<any> {
+    return this.http.post(`${this.apiServerUrl}/appointments/add-appointment`, appointment);
+}
+
 }
